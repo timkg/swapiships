@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import App from "./components/app";
 import createApi from "./api";
+
+import "./main.css";
 
 const target = document.createElement("div");
 document.body.appendChild(target);
