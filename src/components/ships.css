@@ -1,7 +1,7 @@
 .ships {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: end;
     margin-left: 225px; /* sidebar width, use css variable? */
 }
 
