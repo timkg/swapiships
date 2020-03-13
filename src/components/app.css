@@ -1,0 +1,20 @@
+.app {
+    min-height: 100vh;
+}
+
+header {
+    background: #000;
+    padding: 20px;
+}
+
+header h1 {
+    font-family: "DIN Condensed";
+    color: #fefefe;
+    margin: 0;
+}
+
+header h2 {
+    color: #fff;
+    margin: 0;
+    font-family: "DIN Condensed";
+}

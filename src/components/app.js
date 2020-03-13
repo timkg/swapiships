@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import StarshipList from "./starshipList";
+import Ships from "./ships";
+import "./app.css";
 
 const STATES = {
     "PENDING": "PENDING",
@@ -66,7 +67,10 @@ export default class App extends Component {
         
         return (
             <div>
-                <h1>Star Wars Star Ships</h1>
+                <header>
+                    <h1>Star Ships</h1>
+                    <h2>of the Star Wars Universe</h2>
+                </header>
                 
                 {status === STATES.PENDING && (
                     <p>Loading...</p>
@@ -77,7 +81,7 @@ export default class App extends Component {
                 )}
                 
                 {status === STATES.FULFILLED && (
-                    <StarshipList starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
+                    <Ships starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
                 )}
 
             </div>
