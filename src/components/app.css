@@ -1,10 +1,13 @@
 .app {
     min-height: 100vh;
+    display: flex;
 }
 
 header {
     background: #000;
     padding: 20px;
+    width: 225px;
+    flex-shrink: 0;
 }
 
 header h1 {

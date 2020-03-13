@@ -1,15 +1,12 @@
-.ships-row {
+.ships {
     display: flex;
-    justify-content: space-between;
-    padding: 50px 50px 0 50px;
-}
-
-.ships-row + .ships-row {
-    padding-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .ship {
     width: 250px;
+    margin: 20px;
 }
 
 .ship-image {

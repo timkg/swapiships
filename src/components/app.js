@@ -66,23 +66,25 @@ export default class App extends Component {
         const fetchNext = data && data.next ? this.requestUrl.bind(this, data.next) : null;
         
         return (
-            <div>
+            <div className="app">
                 <header>
                     <h1>Star Ships</h1>
                     <h2>of the Star Wars Universe</h2>
                 </header>
-                
-                {status === STATES.PENDING && (
-                    <p>Loading...</p>
-                )}
 
-                {status === STATES.REJECTED && (
-                    <p>Something went wrong.</p>
-                )}
-                
-                {status === STATES.FULFILLED && (
-                    <Ships starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
-                )}
+                <section className="content">
+                    {status === STATES.PENDING && (
+                        <p>Loading...</p>
+                    )}
+
+                    {status === STATES.REJECTED && (
+                        <p>Something went wrong.</p>
+                    )}
+                    
+                    {status === STATES.FULFILLED && (
+                        <Ships starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
+                    )}
+                </section>
 
             </div>
         );
