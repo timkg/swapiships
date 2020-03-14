@@ -1,0 +1,41 @@
+.ship {
+    transition: opacity 0.25s;
+    transition: transform 0.25s;
+
+    transform: scale(.9); 
+    opacity: 0;
+}
+
+.ship.in {
+    transform: scale(1); 
+    opacity: 1;
+}
+
+.ship-image {
+    height: 150px;
+    background: url("/stars.jpg");
+}
+
+.ship h4 {
+    margin: 5px 0;
+    padding: 10px 20px;
+    background: #CD4A36;
+    color: #efefef;
+    margin-top: 15px;
+}
+
+.ship dt {
+    padding: 0 20px;
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.ship dd {
+    border-bottom: 1px solid #ddd;
+    padding: 2px 20px 5px 20px;
+    margin-inline-start: 0;
+    margin-top: 5px;
+}
