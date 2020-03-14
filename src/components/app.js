@@ -64,6 +64,12 @@ export default class App extends Component {
                     status: STATES.FULFILLED,
                     data: response
                 })
+
+                setTimeout(() => {
+                    this.setState({
+                        leavingState: null
+                    })
+                }, 1000)
             })
             .catch(reason => {
                 this.setState({
