@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Ships from "./ships";
+import Loading from "./loading";
 import "./app.css";
 
 const STATES = {
@@ -14,7 +15,9 @@ export default class App extends Component {
         super(props);
 
         this.state = {
+            leavingState: null,
             status: STATES.PENDING
+            
         }
     }
 
@@ -30,13 +33,21 @@ export default class App extends Component {
         this.props.api.getPage(pageNumber)
             .then(response => {
                 this.setState({
+                    leavingState: this.state.status,
                     status: STATES.FULFILLED,
                     data: response
                 })
+
+                setTimeout(() => {
+                    this.setState({
+                        leavingState: null
+                    })
+                }, 1000)
             })
             .catch(reason => {
                 this.setState({
-                    status: STATES.REJECTED
+                    leavingState: this.state.status,
+                    status: STATES.REJECTED,
                 })
             })
     }
@@ -49,19 +60,21 @@ export default class App extends Component {
         this.props.api.get(url)
             .then(response => {
                 this.setState({
+                    leavingState: this.state.status,
                     status: STATES.FULFILLED,
                     data: response
                 })
             })
             .catch(reason => {
                 this.setState({
-                    status: STATES.REJECTED
+                    leavingState: this.state.status,
+                    status: STATES.REJECTED,
                 })
             })
     }
 
     render() {
-        const { status, data } = this.state;
+        const { status, leavingState, data } = this.state;
         const fetchPrev = data && data.previous ? this.requestUrl.bind(this, data.previous) : null;
         const fetchNext = data && data.next ? this.requestUrl.bind(this, data.next) : null;
         
@@ -73,17 +86,20 @@ export default class App extends Component {
                 </header>
 
                 <section className="content">
-                    {status === STATES.PENDING && (
-                        <p>Loading...</p>
+
+                    {((status === STATES.PENDING) || (leavingState === STATES.PENDING)) && (
+                        <Loading isTransitioningOut={leavingState === STATES.PENDING}/>
+                    )}
+
+                    {status === STATES.FULFILLED && (
+                        <Ships starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
                     )}
 
                     {status === STATES.REJECTED && (
                         <p>Something went wrong.</p>
                     )}
                     
-                    {status === STATES.FULFILLED && (
-                        <Ships starships={data.results} fetchPrev={fetchPrev} fetchNext={fetchNext} />
-                    )}
+                    
                 </section>
 
             </div>
@@ -91,3 +107,4 @@ export default class App extends Component {
     }
 
 }
+

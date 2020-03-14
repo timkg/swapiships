@@ -25,3 +25,9 @@ header h1 {
 header img {
     width: 75%;
 }
+
+.content {
+    width: 100%;
+    margin-left: 225px;
+    position: relative;
+}

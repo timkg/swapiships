@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavCard from "./navCard";
+import Ship from "./ship";
 
 import "./ships.css";
 
@@ -12,21 +12,7 @@ export default (props) => {
             </NavCard> */}
 
             {props.starships.map((ship) => (
-                <div className="ship">
-                    <div>
-                        <h4>{ship.name}</h4>
-                        <dl>
-                            <dt>Crew</dt>
-                            <dd>{ship.crew == 0 ? "None" : ship.crew }</dd>
-                            
-                            <dt>Passengers</dt>
-                            <dd>{ship.passengers == 0 ? "None" : ship.passengers}</dd>
-
-                            <dt>Hyperdrive Rating</dt>
-                            <dd>{ship.hyperdrive_rating}</dd>
-                        </dl>
-                    </div>
-                </div>
+                <Ship {...ship} />
             ))}
 
             {/* <NavCard>
