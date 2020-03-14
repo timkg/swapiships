@@ -26,6 +26,9 @@ export default class App extends Component {
     }
 
     requestPage(pageNumber) {
+        
+        // TODO remove duplication between here and  requestUrl
+
         this.setState({
             status: STATES.PENDING
         });
@@ -53,6 +56,9 @@ export default class App extends Component {
     }
 
     requestUrl(url) {
+
+        // TODO remove duplication between here and requestPage
+
         this.setState({
             status: STATES.PENDING
         });
