@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./ship.css";
+import "./card.css";
 
 export default class Ship extends Component {
 
@@ -23,7 +24,7 @@ export default class Ship extends Component {
         const { name, crew, passengers, hyperdrive_rating} = this.props;
 
         return (
-            <div className={`ship ${this.state.className}`}>
+            <div tabIndex={0} className={`card ship ${this.state.className}`}>
                 <div>
                     <h4>{name}</h4>
                     <dl>

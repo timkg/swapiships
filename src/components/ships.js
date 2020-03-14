@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Ship from "./ship";
+import NavCard from "./navCard";
 
 import "./ships.css";
 
@@ -7,17 +8,21 @@ export default (props) => {
     return (
         <section className="ships">
 
-            {/* <NavCard>
-                <button onClick={props.fetchPrev}>prev</button>
-            </NavCard> */}
+            {props.fetchPrev && 
+                <NavCard onClick={props.fetchPrev}>
+                    <img src="/prev.svg" alt="Load previous list of star ships"/>
+                </NavCard>
+            }
 
             {props.starships.map((ship) => (
                 <Ship {...ship} />
             ))}
 
-            {/* <NavCard>
-                <button onClick={props.fetchNext}>next</button>
-            </NavCard> */}
+            {props.fetchNext && 
+                <NavCard onClick={props.fetchNext}>
+                    <img src="/next.svg" alt="Load next list of star ships"/>
+                </NavCard>
+            }
 
         </section>
     );
