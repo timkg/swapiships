@@ -68,8 +68,8 @@ export default class App extends Component {
         return (
             <div className="app">
                 <header>
-                    <h1>Star Ships</h1>
-                    <h2>of the Star Wars Universe</h2>
+                    <h1>Star Ships from <img src="/logowhite.svg" alt="Star Wars Logo"/></h1>
+                    
                 </header>
 
                 <section className="content">
