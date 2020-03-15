@@ -27,37 +27,12 @@ export default class App extends Component {
 
     requestPage(pageNumber) {
         
-        // TODO remove duplication between here and  requestUrl
+       const url = this.props.api.pageNumberToRequestUrl(pageNumber);
 
-        this.setState({
-            status: STATES.PENDING
-        });
-
-        this.props.api.getPage(pageNumber)
-            .then(response => {
-                this.setState({
-                    leavingState: this.state.status,
-                    status: STATES.FULFILLED,
-                    data: response
-                })
-
-                setTimeout(() => {
-                    this.setState({
-                        leavingState: null
-                    })
-                }, 1000)
-            })
-            .catch(reason => {
-                this.setState({
-                    leavingState: this.state.status,
-                    status: STATES.REJECTED,
-                })
-            })
+       return this.requestUrl(url);
     }
 
     requestUrl(url) {
-
-        // TODO remove duplication between here and requestPage
 
         this.setState({
             status: STATES.PENDING
