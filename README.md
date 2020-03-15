@@ -4,14 +4,14 @@ SwapiShips is a React Single-Page Application displaying star ships from the Sta
 
 # How to run it
 The `src` folder contains the source code files, which need to be compiled and bundled before they can be used in the browser.
-This is done using babel.js for compilation and webpack for bundling.
+This is done using [babel.js](https://babeljs.io/) for compilation and [webpack](https://webpack.js.org/) for bundling.
 
 ## Requirements
-Node.js and npm
+You need [Node.js and npm](https://nodejs.org/) installed on your system.
 
 ## Instructions
 
-Clone or download the repository
+Clone the repo using `git` or download it as a zip file from [github](https://github.com/timkg/swapiships)
 
 ```
 git clone https://github.com/timkg/swapiships.git
@@ -36,7 +36,16 @@ cd public
 npx serve
 ```
 
-The example above uses npx to run serve, but any other webserver would work just as well.
+The example above uses [npx](https://nodejs.dev/the-npx-nodejs-package-runner) to run [serve](https://github.com/zeit/serve), but any other webserver would work just as well. If you have python on your system, a simple
+```
+python -m SimpleHTTPServer
+```
+will suffice.
+
+You can also see the site live at [https://sw.timkg.de](https://sw.timkg.de).
 
 ## Troubleshooting
-Chrome sometimes complains about CORS requests when running a website under localhost. If that should happen, please consider using another browser, such as Firefox. 
+Chrome sometimes complains about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests made from a website running under localhost. If that should happen, please consider using another browser for testing this site locally, such as Firefox. Or check it out at [https://sw.timkg.de](https://sw.timkg.de).
+
+# Notes
+When I started working on this project, I pondered using [create-react-app](https://create-react-app.dev/) or [Gatsby](https://www.gatsbyjs.org/) to kick things off. While those tools are excellent in providing frictionless access to modern best practices, they also come at a cost: intransparent build processes, hidden complexity, and dependency explosion. I decided to go with a less complex setup for this project.
