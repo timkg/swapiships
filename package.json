@@ -4,7 +4,8 @@
   "description": "A coding challenge for a frontend developer role.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "develop": "webpack-dev-server"
   },
   "author": "tim.theodor@gmail.com",
   "license": "ISC",
