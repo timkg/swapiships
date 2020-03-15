@@ -15,7 +15,7 @@ export default (props) => {
             }
 
             {props.starships.map((ship) => (
-                <Ship {...ship} />
+                <Ship key={ship.url} {...ship} />
             ))}
 
             {props.fetchNext && 
