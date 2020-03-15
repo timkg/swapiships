@@ -24,7 +24,7 @@ export default class Ship extends Component {
         const { name, crew, passengers, hyperdrive_rating} = this.props;
 
         return (
-            <div tabIndex={0} className={`card ship ${this.state.className}`}>
+            <div tabIndex={-1} className={`card ship ${this.state.className}`}>
                 <div>
                     <h4>{name}</h4>
                     <dl>
