@@ -11,17 +11,13 @@
     opacity: 1;
 }
 
-.ship-image {
-    height: 150px;
-    background: url("/stars.jpg");
-}
-
 .ship h4 {
     margin: 5px 0;
     padding: 10px 20px;
     background: #CD4A36;
     color: #efefef;
     margin-top: 15px;
+    text-transform: capitalize;
 }
 
 .ship dt {

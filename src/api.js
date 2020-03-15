@@ -1,13 +1,8 @@
 import axios from "axios";
+import { API_BASE_URL } from "./constants";
 
-export default function createApi(baseUrl = "https://swapi.co/api/starships/") {
+export default function createApi(baseUrl = API_BASE_URL) {
     var responseCache = {};
-
-    function getPage(pageNumber) {
-        const url = `${baseUrl}?page=${pageNumber}`;
-
-        return get(url);
-    }
 
     function get(url) {
         if (responseCache[url]) {
@@ -22,8 +17,12 @@ export default function createApi(baseUrl = "https://swapi.co/api/starships/") {
             })
     }
 
+    function pageNumberToRequestUrl(pageNumber) {
+        return `${baseUrl}?page=${pageNumber}`;
+    }
+
     return {
-        getPage,
-        get
+        get,
+        pageNumberToRequestUrl
     }
 }

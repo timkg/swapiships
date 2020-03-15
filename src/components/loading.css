@@ -33,15 +33,25 @@
 
 @keyframes crawl {
     0% {
-      /* The element starts below the screen */
       top: 50vh;
-      /* Rotate the text 20 degrees but keep it close to the viewer */
       transform: rotateX(20deg) translateZ(0);
     }
     100% { 
-      /* This is a magic number, but using a big one to make sure the text is fully off the screen at the end */
       top: -6000px;
-      /* Slightly increasing the rotation at the end and moving the text far away from the viewer */
       transform: rotateX(25deg) translateZ(-2500px);
     }
   }
+
+
+  @media (max-width: 750px) {
+    
+    .loading-container {
+      height: 100vh;
+  }
+  
+  .star-wars {
+      font-size: 200%;
+  }
+  
+
+}
