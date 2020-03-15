@@ -33,3 +33,21 @@
 .card.nav img {
     width: 100%;
 }
+
+@media (max-width: 750px) {
+    
+    .card {
+        width: 100%;
+    }
+
+    .card.nav {
+        text-align: center;
+    }
+
+    .card.nav img {
+        width: 50px;
+        text-align: center;
+        transform: rotate(90deg);
+    }
+
+}
