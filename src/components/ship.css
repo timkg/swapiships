@@ -11,11 +11,6 @@
     opacity: 1;
 }
 
-.ship-image {
-    height: 150px;
-    background: url("/stars.jpg");
-}
-
 .ship h4 {
     margin: 5px 0;
     padding: 10px 20px;
