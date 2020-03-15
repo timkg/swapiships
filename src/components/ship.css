@@ -22,6 +22,7 @@
     background: #CD4A36;
     color: #efefef;
     margin-top: 15px;
+    text-transform: capitalize;
 }
 
 .ship dt {
