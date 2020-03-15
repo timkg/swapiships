@@ -60,3 +60,4 @@ If this project were to be continued, I'd work on the following things next:
 - Adapting the loading animation to display different paragraphs from the films, instead of always showing the same one.
 - A smoke test which runs periodically and reports via email if the page is down or not displaying the expected content.
 - Find proper images for the star ships to display on the cards.
+- Extract the state transition logic from app.js and use a proper state machine, or some reactive state management solution like [rxjs](http://reactivex.io/).
