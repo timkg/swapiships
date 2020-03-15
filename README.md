@@ -48,4 +48,15 @@ You can also see the site live at [https://sw.timkg.de](https://sw.timkg.de).
 Chrome sometimes complains about [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) requests made from a website running under localhost. If that should happen, please consider using another browser for testing this site locally, such as Firefox. Or check it out at [https://sw.timkg.de](https://sw.timkg.de).
 
 # Notes
+
+## Tooling setup
 When I started working on this project, I pondered using [create-react-app](https://create-react-app.dev/) or [Gatsby](https://www.gatsbyjs.org/) to kick things off. While those tools are excellent in providing frictionless access to modern best practices, they also come at a cost: intransparent build processes, hidden complexity, and dependency explosion. I decided to go with a less complex setup for this project.
+
+## Next steps
+If this project were to be continued, I'd work on the following things next:
+- A ship detail view, accessible by clicking on a ship card.
+- Client-side routing with deep-linking to specific ships and pagination pages.
+- A better mobile experience. Loading more ships is not as polished as it could be right now.
+- Adapting the loading animation to display different paragraphs from the films, instead of always showing the same one.
+- A smoke test which runs periodically and reports via email if the page is down or not displaying the expected content.
+- Find proper images for the star ships to display on the cards.
