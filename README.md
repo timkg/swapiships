@@ -1,6 +1,6 @@
 A code challenge.
 
-SwapiShips is a React Single-Page Application displaying star ships from the Star Wars API, [swapi](https://swapi.co/).
+SwapiShips is a React Single-Page Application displaying star ships from the Star Wars API, [swapi](https://swapi.dev/).
 
 # How to run it
 The `src` folder contains the source code files, which need to be compiled and bundled before they can be used in the browser.
